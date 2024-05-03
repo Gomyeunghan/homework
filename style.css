@@ -1,0 +1,55 @@
+img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.profiles {
+  padding: 10px;
+  margin: auto;
+  margin-top: 300px;
+  width: 336px;
+  height: 168px;
+}
+.profile-group {
+  margin: 10px;
+  width: 64px;
+  height: 64px;
+  float: left;
+}
+.profiles div:nth-child(-n + 8) {
+  position: relative;
+}
+.online {
+  border: 1px solid white;
+  position: absolute;
+  background-color: #4cfe88;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  right: 0px;
+  bottom: 5px;
+}
+.offline {
+  border: 1px solid white;
+  position: absolute;
+  background-color: #dbdbdb;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  right: 0px;
+  bottom: 5px;
+}
+
+@supports (display: flex) {
+  .profiles {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    margin-top: 300px;
+    width: 336px;
+    height: 168px;
+  }
+  .profiles div:nth-child(-n + 4) {
+    order: 1;
+  }
+}
