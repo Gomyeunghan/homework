@@ -1,0 +1,193 @@
+/* sr-only */
+.sr-only {
+  position: absolute;
+  /* 
+  width와 height 속성의 논리속성
+  inline-size: 1px;
+  block-size: 1px; 
+  */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 스타일 리셋  */
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+}
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--base-font-family);
+  line-height: 1.15;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  font-size: 1em;
+  color: #181818;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+span,
+input,
+textarea,
+select,
+option,
+button {
+  font: inherit;
+}
+/* 로고 */
+.logo {
+  margin: auto;
+  margin-top: 6.75rem;
+  width: 14.375rem;
+}
+/* 전체박스 */
+/* .naver-login {
+  justify-content: center;
+  text-align: center;
+} */
+/* 로그인 박스 */
+.login {
+  margin: 0 1.25rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  /* width: 31.25rem;
+  height: 31.25rem; */
+
+  /* 로그인 버튼 */
+  button {
+    width: 100%;
+    background-color: #03cf5d;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.8125rem;
+    padding: 0.8125rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #fff;
+    margin-bottom: 0.625rem;
+  }
+}
+/* 로그인 아이디 */
+.login-id {
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 2.8125rem;
+
+  &:focus {
+    background-color: #e9f0fd;
+    outline: 0.0625rem solid #03cf5d;
+  }
+}
+/* 로그인 패스워드 */
+.login-pwd {
+  border: 0.0625rem solid rgb(218, 218, 218);
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1.25rem 0;
+  padding: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 2.8125rem;
+
+  &:focus {
+    background-color: #e9f0fd;
+    outline: 0.0625rem solid #03cf5d;
+  }
+}
+
+/* 로그인 체크박스 */
+.login-save-checkbox {
+  position: relative;
+  float: right;
+
+  input {
+    position: absolute;
+    right: 6.6rem;
+    top: 0.2rem;
+    appearance: none;
+    padding: 0.125rem;
+  }
+  label {
+    background: url(unchecked.png) no-repeat 0 0 / contain;
+    padding-left: 1.5rem;
+    padding-bottom: 0.0625rem;
+  }
+  input:checked + label {
+    background-image: url(/Component\ 1.png);
+  }
+  input:focus {
+    outline: 1px;
+  }
+
+  input:focus-visible {
+    outline-offset: 0.625rem;
+    outline-style: auto;
+    outline: 0.125rem solid #24388d;
+  }
+}
+
+.ip-box {
+  display: flex;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .login {
+    display: block;
+    width: 31.25rem;
+    margin: auto;
+  }
+  .tooltip-group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .ip-box {
+    display: block;
+  }
+}
