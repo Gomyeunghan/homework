@@ -26,6 +26,7 @@
           class="login-id"
           placeholder="아이디(이메일)"
           id="login-id"
+          required="required"
         />
         <label for="login-id"></label>
       </div>
@@ -35,15 +36,12 @@
           class="login-pwd"
           placeholder="비밀번호"
           id="login-pwd"
+          required="required"
         />
         <label for="login-pwd"></label>
-        <button>로그인</button>
+        <button type="submit">로그인</button>
       </div>
-      <div
-        class="tooltip-group"
-        role="group"
-        aria-labelledby="saveLoginInformation"
-      >
+      <div class="tooltip-group" role="group" aria-label="tooltip-group">
         <div class="login-save-checkbox">
           <input
             type="checkbox"
@@ -53,7 +51,12 @@
           <label for="saveLoginInformation">로그인상태유지</label>
         </div>
         <div class="ip-box">
-          <a href="./ip_security.html" target="_blank">IP보안</a>
+          <a
+            href="./ip_security.html"
+            target="_blank"
+            aria-label="ip보안에 관하여"
+            >IP보안</a
+          >
 
           <span class="on-off" tabindex="0">OFF</span>
         </div>

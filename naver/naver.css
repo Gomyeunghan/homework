@@ -76,11 +76,6 @@ button {
   margin-top: 6.75rem;
   width: 14.375rem;
 }
-/* 전체박스 */
-/* .naver-login {
-  justify-content: center;
-  text-align: center;
-} */
 /* 로그인 박스 */
 .login {
   margin: 0 1.25rem;
@@ -107,11 +102,11 @@ button {
 .login-id {
   border: 1px solid rgb(218, 218, 218);
   border-radius: 6px;
-  box-sizing: border-box;
   width: 100%;
   padding: 0.6rem;
   font-size: 0.875rem;
   line-height: 2.8125rem;
+  margin-top: 1.25rem;
 
   &:focus {
     background-color: #e9f0fd;
@@ -122,7 +117,6 @@ button {
 .login-pwd {
   border: 0.0625rem solid rgb(218, 218, 218);
   border-radius: 6px;
-  box-sizing: border-box;
   width: 100%;
   margin: 1.25rem 0;
   padding: 0.6rem;
@@ -173,7 +167,6 @@ button {
 
 @media (min-width: 768px) {
   .login {
-    display: block;
     width: 31.25rem;
     margin: auto;
   }
@@ -189,5 +182,6 @@ button {
 
   .ip-box {
     display: block;
+    display: flex;
   }
 }
